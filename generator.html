@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Meme Generator</title>
+	<style>
+		body {
+			background-color: #f0f0f0;
+			font-family: Arial, sans-serif;
+		}
+		h1 {
+			font-size: 32px;
+			font-weight: bold;
+			text-align: center;
+			margin-top: 50px;
+		}
+		#meme {
+			display: block;
+			margin: 0 auto;
+			margin-top: 50px;
+			width: 500px;
+			height: auto;
+			border: 2px solid black;
+		}
+		#generate-btn {
+			display: block;
+			margin: 0 auto;
+			margin-top: 50px;
+			padding: 10px 20px;
+			font-size: 20px;
+			background-color: #4CAF50;
+			border: none;
+			color: white;
+			cursor: pointer;
+			border-radius: 4px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Random Meme Generator</h1>
+	<img id="meme" src="" alt="Random Meme">
+	<button id="generate-btn" onclick="generateMeme()">Generate Meme</button>
+	<script>
+		function generateMeme() {
+			// List of meme images
+			var memes = [
+				"meme1.jpg",
+				"meme2.jpg",
+				"meme3.jpg",
+				"meme4.jpg",
+				"meme5.jpg",
+				"meme6.jpg",
+				"meme7.jpg",
+				"meme8.jpg",
+				"meme9.jpg",
+				"meme10.jpg"
+			];
+
+			// Select a random meme image
+			var randomIndex = Math.floor(Math.random() * memes.length);
+			var randomMeme = memes[randomIndex];
+
+			// Update the meme image source
+			document.getElementById("meme").src = randomMeme;
+		}
+	</script>
+</body>
+</html>
